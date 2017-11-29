@@ -1,2 +1,2 @@
-# Pac-man
-Projeto de Sofware Pac-man
+# Pac-Man
+Projeto de Sofware Pac-Man
