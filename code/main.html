@@ -1,10 +1,109 @@
 <html>
 
 <head>
+
+<style>
+.logo {
+    position: absolute;
+}
+#pacman_logo {
+    background-color: white;
+    /* Button position */
+    top: 20px;
+    left: 280px;
+    /* Button dimensions */
+    height: 100px;
+    width: 300px;
+    /* Font */
+    font-size: 100px;
+    /* Alignment */
+    text-align: center;
+    vertical-align: middle;
+    line-height: 100px;
+}
+.button {
+    position: absolute;
+    border: 1px solid black;
+    cursor: pointer;
+}
+#play {
+    background-color: #4B77BE;
+    /* Button position */
+    top: 230px;
+    left: 500px;
+    /* Button dimensions */
+    height: 100px;
+    width: 300px;
+    /* Font */
+    font-size: 100px;
+    color: white;
+    /* Alignment */
+    text-align: center;
+    vertical-align: middle;
+    line-height: 100px;
+}
+#records {
+    background-color: #4B77BE;
+    /* Button position */
+    top: 380px;
+    left: 400px;
+    /* Button dimensions */
+    height: 100px;
+    width: 500px;
+    /* Font */
+    font-size: 100px;
+    color: white;
+    /* Alignment */
+    text-align: center;
+    vertical-align: middle;
+    line-height: 100px;
+}
+#game_screen {
+    border: 1px solid black;
+    position: absolute;
+    top: 140px;
+    left: 490px;
+    visibility: hidden;
+
+    height:450px;
+    width:342px;
+    margin:20px auto;
+}
+#game_canvas {
+    height:450px;
+    width:342px;
+}
+
+</style>
+
 </head>
 
 <body>
-TEST
+    <div id ='pacman_logo' class='logo'>
+        <img src="Pac-Man_logo.png">
+    </div>
+    <div id='main_screen'>
+        <div id ='play' class='button' onclick=play();>PLAY</div>
+        <div id ='records' class='button' onclick=records();>RECORDS</div>
+    </div>
+    <div id='game'>
+        <div id='game_menu'>
+        </div>
+        <div id='game_screen'>
+            <canvas id='game_canvas'></canvas>
+        </div>
+    </div>
+    <script>
+        function play() {
+            alert("Clicked PLAY");
+            document.getElementById('main_screen').style.visibility = 'hidden';
+            document.getElementById('game_screen').style.visibility = 'visible';
+        }
+
+        function records() {
+            alert("Clicked RECORDS");
+        }
+    </script>
 </body>
 
 </html>
