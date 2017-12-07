@@ -7,7 +7,7 @@
 <img src="https://upload.wikimedia.org/wikipedia/en/f/fc/Pac-Man_logo.png">
 <img src="http://images.uncyc.org/pt/0/07/FANTASMASPACMAN.jpg" width="48">
 
-Projeto desenvolvido na disciplina Projeto de Software no curso de Ciência da Computação da Universidade Federald e Goiás.
+Projeto desenvolvido na disciplina Projeto de Software no curso de Ciência da Computação da Universidade Federal de Goiás.
 
 ## Descrição
 
