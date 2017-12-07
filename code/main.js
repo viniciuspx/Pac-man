@@ -35,5 +35,7 @@ function restart() {
 }
 
 function exit() {
-    alert('Clicked EXIT');
+    document.getElementById('main_screen').style.visibility = 'visible';
+    document.getElementById('game_menu').style.visibility = 'hidden';
+    document.getElementById('game_screen').style.visibility = 'hidden';
 }
