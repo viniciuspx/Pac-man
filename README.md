@@ -4,7 +4,7 @@
 <!-- ![Pac-man-logo](https://upload.wikimedia.org/wikipedia/en/f/fc/Pac-Man_logo.png) -->
 <!-- ![Pac-man](http://images.uncyc.org/pt/0/07/FANTASMASPACMAN.jpg) -->
 
-<img src="https://upload.wikimedia.org/wikipedia/en/f/fc/Pac-Man_logo.png" align="middle">
+<img src="https://upload.wikimedia.org/wikipedia/en/f/fc/Pac-Man_logo.png" align="center">
 <img src="http://images.uncyc.org/pt/0/07/FANTASMASPACMAN.jpg" width="64" align="right">
 
 Projeto desenvolvido na disciplina Projeto de Software no curso de Ciência da Computação da Universidade Federal de Goiás.
