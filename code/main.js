@@ -25,6 +25,17 @@ function play() {
 
 function records() {
     //alert("Clicked RECORDS");
+    document.getElementById('main_screen').style.visibility = 'hidden';
+    document.getElementById('records_list').style.visibility = 'visible';
+    document.getElementById('voltar').style.visibility = 'visible';
+    GAME.screen = RECORDS_SCREEN;
+}
+
+function voltar() {
+    document.getElementById('main_screen').style.visibility = 'visible';
+    document.getElementById('records_list').style.visibility = 'hidden';
+    document.getElementById('voltar').style.visibility = 'hidden';
+    GAME.screen = MAIN_SCREEN;
 }
 
 function pause() {

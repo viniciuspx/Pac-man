@@ -65,6 +65,61 @@
     vertical-align: middle;
     line-height: 100px;
 }
+.rec_item {
+    border: 1px solid black;
+}
+#records_list {
+    border: 1px solid black;
+    top: 140px;
+    left: 490px;
+    visibility: hidden;
+
+    height:362px;
+    width:342px;
+    margin:20px auto;
+}
+/*#records_table {
+    border-spacing: 10px 10px;
+}*/
+#records_table {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#records_table td, #records_table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#records_table tr:nth-child(even){background-color: #f2f2f2;}
+
+#records_table tr:hover {background-color: #ddd;}
+
+#records_table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+#voltar {
+    background-color: #4B77BE;
+    visibility: hidden;
+    /* Button position */
+    top: 530px;
+    left: 535px;
+    /* Button dimensions */
+    height: 60px;
+    width: 260px;
+    /* Font */
+    font-size: 40px;
+    color: white;
+    /* Alignment */
+    text-align: center;
+    vertical-align: middle;
+    line-height: 60px;
+}
 #game_menu {
     /*border: 1px solid black;*/
     visibility: hidden;
@@ -128,6 +183,61 @@
         <div id ='play' class='button' onclick=play();>PLAY (P)</div>
         <div id ='records' class='button' onclick=records();>RECORDS (R)</div>
     </div>
+    <div id='records_list' class='panel'>
+        <table id='records_table'>
+            <tr id='rec_1' class='rec_item'>
+                <td>1 - </td>
+                <td id='rec1_name'>_ _ _</td>
+                <td id='rec1_score'>------</td>
+            </tr>
+            <tr id='rec_2' class='rec_item'>
+                <td>2 - </td>
+                <td id='rec2_name'>_ _ _</td>
+                <td id='rec2_score'>------</td>
+            </tr>
+            <tr id='rec_3' class='rec_item'>
+                <td>3 - </td>
+                <td id='rec3_name'>_ _ _</td>
+                <td id='rec3_score'>------</td>
+            </tr>
+            <tr id='rec_4' class='rec_item'>
+                <td>4 - </td>
+                <td id='rec4_name'>_ _ _</td>
+                <td id='rec4_score'>------</td>
+            </tr>
+            <tr id='rec_5' class='rec_item'>
+                <td>5 - </td>
+                <td id='rec5_name'>_ _ _</td>
+                <td id='rec5_score'>------</td>
+            </tr>
+            <tr id='rec_6' class='rec_item'>
+                <td>6 - </td>
+                <td id='rec6_name'>_ _ _</td>
+                <td id='rec6_score'>------</td>
+            </tr>
+            <tr id='rec_7' class='rec_item'>
+                <td>7 - </td>
+                <td id='rec7_name'>_ _ _</td>
+                <td id='rec7_score'>------</td>
+            </tr>
+            <tr id='rec_8' class='rec_item'>
+                <td>8 - </td>
+                <td id='rec8_name'>_ _ _</td>
+                <td id='rec8_score'>------</td>
+            </tr>
+            <tr id='rec_9' class='rec_item'>
+                <td>9 - </td>
+                <td id='rec9_name'>_ _ _</td>
+                <td id='rec9_score'>------</td>
+            </tr>
+            <tr id='rec_10' class='rec_item'>
+                <td>10 - </td>
+                <td id='rec10_name'>_ _ _</td>
+                <td id='rec10_score'>------</td>
+            </tr>
+        </table>
+    </div>
+    <div id ='voltar' class='button' onclick=voltar();><< VOLTAR</div>
     <div id='game'>
         <div id='game_menu' class='panel'>
             <table>
