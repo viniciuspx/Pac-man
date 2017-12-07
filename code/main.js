@@ -12,7 +12,8 @@ var GAME = {
     keys_down: {
         p: false,
         r: false,
-        e: false
+        e: false,
+        v: false
     }
 };
 
@@ -87,6 +88,13 @@ document.addEventListener('keydown', (event) => {
         }
     }
 
+    if (GAME.screen == RECORDS_SCREEN) {
+        if (keyName == 'v' || keyName == 'V') {
+            voltar();
+            GAME.keys_down.v = true;
+        }
+    }
+
     if (GAME.screen == GAME_SCREEN) {
         if (keyName == 'p' || keyName == 'P') {
             if (!GAME.keys_down.p) {
@@ -121,5 +129,8 @@ document.addEventListener('keyup', (event) => {
     }
     if (keyName == 'e' || keyName == 'E') {
         GAME.keys_down.e = false;
+    }
+    if (keyName == 'v' || keyName == 'V') {
+        GAME.keys_down.v = false;
     }
 }, false);
