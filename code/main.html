@@ -2,7 +2,14 @@
 
 <head>
 
+<title>Pacman PS-2017-2</title>
+
+<script src='main.js'></script>
+
 <style>
+.panel {
+    position: absolute;
+}
 .logo {
     position: absolute;
 }
@@ -58,6 +65,42 @@
     vertical-align: middle;
     line-height: 100px;
 }
+#game_menu {
+    /*border: 1px solid black;*/
+    visibility: hidden;
+    /* Menu position */
+    top: 158px;
+    left: 320px;
+    /* Menu dimensions */
+    height: 450px;
+    width: 160px;
+}
+#pause {
+    background-color: #B3E4FC;
+    color: black;
+    width: 150px;
+    /* Alignment */
+    text-align: center;
+    vertical-align: middle;
+}
+#restart {
+    top: 50px;
+    background-color: #B3E4FC;
+    color: black;
+    width: 150px;
+    /* Alignment */
+    text-align: center;
+    vertical-align: middle;
+}
+#exit {
+    top: 98px;
+    background-color: #B3E4FC;
+    color: black;
+    width: 150px;
+    /* Alignment */
+    text-align: center;
+    vertical-align: middle;
+}
 #game_screen {
     border: 1px solid black;
     position: absolute;
@@ -73,7 +116,6 @@
     height:450px;
     width:342px;
 }
-
 </style>
 
 </head>
@@ -87,23 +129,26 @@
         <div id ='records' class='button' onclick=records();>RECORDS</div>
     </div>
     <div id='game'>
-        <div id='game_menu'>
+        <div id='game_menu' class='panel'>
+            <table>
+                <tr id='pause' class='button' onclick=pause();>
+                    <td><img id='pause_img' src='pause.png'></img></td>
+                    <td id='pause_txt'>PAUSE (P)</td>
+                </tr>
+                <tr id='restart' class='button' onclick=restart();>
+                    <td><img src='restart.png'></img></td>
+                    <td>RESTART (R)</td>
+                </tr>
+                <tr id='exit' class='button' onclick=exit();>
+                    <td><img src='exit.png'></img></td>
+                    <td>EXIT (E)</td>
+                </tr>
+            </table>
         </div>
         <div id='game_screen'>
             <canvas id='game_canvas'></canvas>
         </div>
     </div>
-    <script>
-        function play() {
-            alert("Clicked PLAY");
-            document.getElementById('main_screen').style.visibility = 'hidden';
-            document.getElementById('game_screen').style.visibility = 'visible';
-        }
-
-        function records() {
-            alert("Clicked RECORDS");
-        }
-    </script>
 </body>
 
 </html>
