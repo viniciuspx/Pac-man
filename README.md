@@ -1,5 +1,5 @@
 # Pac-Man
-Projeto de Sofware Pac-Man
+## Projeto de Sofware Pac-Man
 
 <!-- ![Pac-man-logo](https://upload.wikimedia.org/wikipedia/en/f/fc/Pac-Man_logo.png) -->
 <!-- ![Pac-man](http://images.uncyc.org/pt/0/07/FANTASMASPACMAN.jpg) -->
@@ -7,6 +7,7 @@ Projeto de Sofware Pac-Man
 <img src="https://upload.wikimedia.org/wikipedia/en/f/fc/Pac-Man_logo.png">
 <img src="http://images.uncyc.org/pt/0/07/FANTASMASPACMAN.jpg" width="48">
 
+Projeto desenvolvido na disciplina Projeto de Software.
 
 ## Descrição
 
