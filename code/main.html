@@ -4,6 +4,7 @@
 
 <title>Pacman PS-2017-2</title>
 
+<script src='require.js'></script>
 <script src='main.js'></script>
 
 <style>
@@ -168,8 +169,19 @@
     margin:20px auto;
 }
 #game_canvas {
-    height:450px;
-    width:342px;
+    border: 1px solid black;
+    height: 322px; /*450px;*/
+    width: 322px; /*342px;*/
+}
+
+
+
+#pacman {
+    position: absolute;
+    top: 140px;
+  height:450px;
+  width:342px;
+  margin:20px auto;
 }
 </style>
 
@@ -179,10 +191,12 @@
     <div id ='pacman_logo' class='logo'>
         <img src="Pac-Man_logo.png">
     </div>
+
     <div id='main_screen'>
         <div id ='play' class='button' onclick=play();>PLAY (P)</div>
         <div id ='records' class='button' onclick=records();>RECORDS (R)</div>
     </div>
+
     <div id='records_list' class='panel'>
         <table id='records_table'>
             <tr id='rec_1' class='rec_item'>
@@ -238,6 +252,7 @@
         </table>
     </div>
     <div id ='voltar' class='button' onclick=voltar();>VOLTAR (V)</div>
+
     <div id='game'>
         <div id='game_menu' class='panel'>
             <table>
@@ -259,6 +274,23 @@
             <canvas id='game_canvas'></canvas>
         </div>
     </div>
+
+    <!--div id="pacman"></div-->
+    <!--script src="pacman.js"></script>
+    <script src="modernizr-1.5.min.js"></script>
+    <script>
+    function start() {
+        var el = document.getElementById("pacman");
+
+        if (Modernizr.canvas && Modernizr.localstorage &&
+          Modernizr.audio && (Modernizr.audio.ogg || Modernizr.audio.mp3)) {
+              window.setTimeout(function () { PACMAN.init(el, "./"); }, 0);
+        } else {
+            el.innerHTML = "Sorry, needs a decent browser<br /><small>" +
+            "(firefox 3.6+, Chrome 4+, Opera 10+ and Safari 4+)</small>";
+        }
+    }
+    </script-->
 </body>
 
 </html>
