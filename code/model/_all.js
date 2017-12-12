@@ -6,4 +6,4 @@ require('model.Fantasma');
 require('model.Jogo');
 require('model.Ponto');
 require('model.Temporizador');
-
+require('model.Labirinto');

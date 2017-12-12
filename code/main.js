@@ -27,6 +27,13 @@ var HORIZONTAL      = 6;
 var COIN            = 7;
 var PILL            = 8;
 var DOOR            = 9;
+var PILL_2          = 10;
+
+var SPRITE_URLS = [
+    "30.png","27.png","26.png","28.png","29.png",
+    "24.png","25.png","31.png","32.png","30.png",
+    "33.png"
+];
 
 var GRID = [
     [1,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,3],
@@ -59,6 +66,70 @@ function play() {
     document.getElementById('game_menu').style.visibility = 'visible';
     document.getElementById('game_screen').style.visibility = 'visible';
     GAME.screen = GAME_SCREEN;
+
+    //=====================
+    // Building the GRID
+    //=====================
+
+    var top = 0, left = 0;
+    var game_screen = document.getElementById('game_screen');
+    var top_offset = game_screen.style.top;
+    var left_offset = game_screen.style.left;
+
+    for (var i = 0; i < 23; i++) {
+        for (var j = 0; j < 23; j++) {
+            var tile = document.createElement("div");
+            tile.id = "tile"+(i*23+j);
+            // tile.style.border = "1px solid black";
+            tile.style.position = "absolute";
+            tile.style.width = "14px";
+            tile.style.height = "14px";
+            tile.style.top = (top+top_offset)+"px";
+            tile.style.left = (left+left_offset)+"px";
+            var img = document.createElement("img");
+            img.id = "tile"+(i*23+j)+"_img";
+            var url = SPRITE_URLS[GRID[i][j]];
+            img.src = 'sprites/' + url;
+            tile.appendChild(img);
+            game_screen.appendChild(tile);
+
+            left += 14;
+        }
+
+        top += 14;
+        left = 0;
+    }
+
+    var pills_numbers = [];
+    for (var i = 0; i < 23; i++) {
+        for (var j = 0; j < 23; j++) {
+            if (GRID[i][j] == PILL)
+                pills_numbers.push(i*23+j);
+        }
+    }
+
+    var toggle = 0;
+    var pills = [];
+    pills.push(document.getElementById("tile" + pills_numbers[0] + "_img"));
+    pills.push(document.getElementById("tile" + pills_numbers[1] + "_img"));
+    pills.push(document.getElementById("tile" + pills_numbers[2] + "_img"));
+    pills.push(document.getElementById("tile" + pills_numbers[3] + "_img"));
+    var anim1 = setInterval(function(){
+        if (toggle == 0) {
+            toggle = 1;
+            pills[0].src = 'sprites/33.png';
+            pills[1].src = 'sprites/33.png';
+            pills[2].src = 'sprites/33.png';
+            pills[3].src = 'sprites/33.png';
+        }
+        else {
+            pills[0].src = 'sprites/32.png';
+            pills[1].src = 'sprites/32.png';
+            pills[2].src = 'sprites/32.png';
+            pills[3].src = 'sprites/32.png';
+            toggle = 0;
+        }
+    }, 500);
 }
 
 function records() {
@@ -180,7 +251,9 @@ require('controller.*');
 
 ready(function(){
 
+window.onload = function() {
     var p = new Ponto(1,2);
     p.print();
+};
 
 });
