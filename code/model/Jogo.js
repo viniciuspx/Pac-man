@@ -6,6 +6,7 @@ ready(function(){
 
 var Jogo = function() {
     this.sprites = [];
+    this.anims= [];
     this.Labirinto = new Labirinto();
 }
 

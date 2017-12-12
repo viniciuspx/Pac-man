@@ -61,6 +61,8 @@ var GRID = [
     [2,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,4]
 ];
 
+var anim1;
+
 function play() {
     document.getElementById('main_screen').style.visibility = 'hidden';
     document.getElementById('game_menu').style.visibility = 'visible';
@@ -114,7 +116,7 @@ function play() {
     pills.push(document.getElementById("tile" + pills_numbers[1] + "_img"));
     pills.push(document.getElementById("tile" + pills_numbers[2] + "_img"));
     pills.push(document.getElementById("tile" + pills_numbers[3] + "_img"));
-    var anim1 = setInterval(function(){
+    anim1 = setInterval(function(){
         if (toggle == 0) {
             toggle = 1;
             pills[0].src = 'sprites/33.png';
@@ -176,6 +178,7 @@ function exit() {
     document.getElementById('game_menu').style.visibility = 'hidden';
     document.getElementById('game_screen').style.visibility = 'hidden';
     GAME.screen = MAIN_SCREEN;
+    clearInterval(anim1);
 }
 
 document.addEventListener('keydown', (event) => {
