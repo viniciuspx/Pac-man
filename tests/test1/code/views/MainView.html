@@ -1,0 +1,85 @@
+<html>
+
+<head>
+<title>Pacman PS-2017-2</title>
+<script src='../require.js'></script>
+<script src="../controllers/MainController.js"></script>
+
+<style>
+.panel {
+    position: absolute;
+}
+.logo {
+    position: absolute;
+}
+#pacman_logo {
+    background-color: white;
+    /* Button position */
+    top: 20px;
+    left: 280px;
+    /* Button dimensions */
+    height: 100px;
+    width: 300px;
+    /* Font */
+    font-size: 100px;
+    /* Alignment */
+    text-align: center;
+    vertical-align: middle;
+    line-height: 100px;
+}
+.button {
+    position: absolute;
+    border: 1px solid black;
+    cursor: pointer;
+}
+#play_button {
+    background-color: #4B77BE;
+    /* Button position */
+    top: 230px;
+    left: 500px;
+    /* Button dimensions */
+    height: 100px;
+    width: 320px;
+    /* Font */
+    font-size: 60px;
+    color: white;
+    /* Alignment */
+    text-align: center;
+    vertical-align: middle;
+    line-height: 100px;
+}
+#records_button {
+    background-color: #4B77BE;
+    /* Button position */
+    top: 380px;
+    left: 415px;
+    /* Button dimensions */
+    height: 100px;
+    width: 480px;
+    /* Font */
+    font-size: 60px;
+    color: white;
+    /* Alignment */
+    text-align: center;
+    vertical-align: middle;
+    line-height: 100px;
+}
+</style>
+</head>
+
+<body>
+    <div id ='pacman_logo' class='logo'>
+        <img src="../../assets/images/Pac-Man_logo.png">
+    </div>
+
+    <div id='main_screen'>
+        <div id ='play_button' class='button' onclick=play_button();>
+            PLAY
+        </div>
+        <div id ='records_button' class='button' onclick=records_button();>
+            RECORDS
+        </div>
+    </div>
+</body>
+
+</html>

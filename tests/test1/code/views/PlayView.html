@@ -1,0 +1,195 @@
+<html>
+
+<head>
+<title>Pacman PS-2017-2</title>
+<script src='../require.js'></script>
+<script src="../controllers/PlayController.js"></script>
+
+<style>
+.panel {
+    position: absolute;
+}
+.logo {
+    position: absolute;
+}
+#pacman_logo {
+    background-color: white;
+    /* Button position */
+    top: 20px;
+    left: 280px;
+    /* Button dimensions */
+    height: 100px;
+    width: 300px;
+    /* Font */
+    font-size: 100px;
+    /* Alignment */
+    text-align: center;
+    vertical-align: middle;
+    line-height: 100px;
+}
+.button {
+    position: absolute;
+    border: 1px solid black;
+    cursor: pointer;
+}
+.button_disabled {
+    position: absolute;
+    border: 1px solid black;
+    cursor: pointer;
+}
+#game_menu {
+    /*border: 1px solid black;*/
+    /*visibility: hidden;*/
+    /* Menu position */
+    top: 158px;
+    left: 320px;
+    /* Menu dimensions */
+    height: 450px;
+    width: 160px;
+}
+#start {
+    background-color: #B3E4FC;
+    color: black;
+    width: 160px;
+    /* Alignment */
+    text-align: center;
+    vertical-align: middle;
+}
+#start_disabled {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 162px;
+    height: 40px;
+    background-color: blue;
+    z-index:2;
+    opacity:0.4;
+    filter: alpha(opacity = 50);
+    visibility: hidden;
+}
+#pause {
+    top: 50px;
+    background-color: #B3E4FC;
+    color: black;
+    width: 160px;
+    /* Alignment */
+    text-align: center;
+    vertical-align: middle;
+}
+#pause_disabled {
+    position: absolute;
+    top: 50px;
+    left: 2px;
+    width: 162px;
+    height: 40px;
+    background-color: blue;
+    z-index:2;
+    opacity:0.4;
+    filter: alpha(opacity = 50);
+}
+#restart {
+    top: 98px;
+    /*top: 50px;*/
+    background-color: #B3E4FC;
+    color: black;
+    width: 160px;
+    /* Alignment */
+    text-align: center;
+    vertical-align: middle;
+}
+#restart_disabled {
+    position: absolute;
+    top: 98px;
+    left: 2px;
+    width: 162px;
+    height: 40px;
+    background-color: blue;
+    z-index:2;
+    opacity:0.4;
+    filter: alpha(opacity = 50);
+}
+#exit {
+    top: 146px;
+    /*top: 98px;*/
+    background-color: #B3E4FC;
+    color: black;
+    width: 160px;
+    /* Alignment */
+    text-align: center;
+    vertical-align: middle;
+}
+#game_screen {
+    border: 1px solid black;
+    position: absolute;
+    top: 140px;
+    left: 490px;
+    /*visibility: hidden;*/
+
+    height: 322px; /*450px;*/
+    width: 322px; /*342px;*/
+    margin:20px auto;
+}
+#game_canvas {
+    border: 1px solid black;
+    height: 322px; /*450px;*/
+    width: 322px; /*342px;*/
+}
+</style>
+</head>
+
+<body>
+    <div id ='pacman_logo' class='logo'>
+        <img src="../../assets/images/Pac-Man_logo.png">
+    </div>
+
+    <div id='game'>
+        <div id='game_menu' class='panel'>
+            <table>
+                <tr id='start' class='button' onclick=start();>
+                    <td>
+                        <img id='start_img' src='../../assets/images/cropped-play.png'>
+                        </img>
+                    </td>
+                    <td id='start_txt'>
+                        START (S)
+                    </td>
+                </tr>
+                <div id='start_disabled'></div>
+                <tr id='pause' class='button_disabled' onclick=pause();>
+                    <td>
+                        <img id='pause_img' src='../../assets/images/pause.png'>
+                        </img>
+                    </td>
+                    <td id='pause_txt'>
+                        PAUSE (P)
+                    </td>
+                </tr>
+                <div id='pause_disabled'></div>
+                <tr id='restart' class='button_disabled' onclick=restart();>
+                    <td>
+                        <img id='restart_img' src='../../assets/images/restart.png'>
+                        </img>
+                    </td>
+                    <td>
+                        RESTART (R)
+                    </td>
+                </tr>
+                <div id='restart_disabled'></div>
+                <tr id='exit' class='button' onclick=exit();>
+                    <td>
+                        <img src='../../assets/images/exit.png'>
+                        </img>
+                    </td>
+                    <td>
+                        EXIT (E)
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id='game_screen'>
+            <!--canvas id='game_canvas'></canvas-->
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+require('models.Item');
+require('models.Moeda');
+require('models.Pilula');
+require('models.Pacman');
+require('models.Fantasma');
+require('models.Jogo');
+require('models.Ponto');
+require('models.Temporizador');
+require('models.Labirinto');
